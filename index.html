@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+
+    <!-- Logo and Menu -->
+    <div class="logo">FROM ME TO YOU</div>
+    <div class="menu">
+      <ul>
+        <li><a href="#home-gallery">HOME</a></li>
+        <li><a href="#letters">LETTERS</a></li>
+        <li><a href="#music">MUSIC</a></li>
+        <li><a href="#video">A VIDEO</a></li>
+        <li><a href="#baby">BY BABY MO</a></li>
+      </ul>
+    </div>
+
+    <!-- Slideshow Section -->
+<div class="slideshow-logo">YOU TAKEN BY ME</div>
+<p class="small-heading">my favorite pictures of you</p>
+
+<audio id="bg-music" loop style="display: none;">
+  <source src="d.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<!-- Slideshow Container -->
+<div id="slideshow" class="slideshow-container">
+  <img class="slide active" src="11.jpg">
+  <img class="slide" src="2.PNG">
+  <img class="slide" src="3.JPG">
+  <img class="slide" src="4.JPG">
+  <img class="slide" src="5.JPG">
+  <img class="slide" src="6.JPG">
+</div>
+
+
+    <!-- Music Section -->
+    <section id="music">
+      <div class="player"></div>
+      <div class="music">MUSIC</div>
+      <p class="music-heading">songs that remind me of you</p>
+
+      <div class="spotify-player">
+        <img src="cover1.jpg" class="cover" alt="Album Art">
+        <div class="song-info"><h3 class="title">Song Title</h3></div>
+
+        <div class="controls">
+          <button id="prev-btn" class="control-btn">
+            <svg width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+              <path d="M6 19V5h2v14H6zm3.5-7L18 18V6l-8.5 6z"/>
+            </svg>
+          </button>
+
+          <button id="play-pause" class="control-btn">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </button>
+
+          <button id="next-btn" class="control-btn">
+            <svg width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+              <path d="M16 5v14h-2V5h2zm-3.5 7L6 6v12l6.5-6z"/>
+            </svg>
+          </button>
+
+          <input type="range" id="progress" value="0" min="0" max="100">
+        </div>
+
+        <audio id="audio"></audio>
+      </div>
+    </section>
+
+    <!-- Letters Section -->
+    <section id="letters">
+      <div class="letters">LETTERS</div>
+      <div class="main-content">
+        <div class="jar-container">
+          <img src="mason jar.png" class="jar" alt="Jar">
+          <div class="note" id="note1" style="top: 100px; left: 140px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note12" style="top: 230px; left: 90px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note13" style="top: 140px; left: 90px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note14" style="top: 90px; left: 70px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note7" style="top: 220px; left: 20px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note8" style="top: 230px; left: 60px;"><img src="note-yellow.png" alt="Note"></div>
+          <div class="note" id="note3" style="top: 80px; left: 120px;"><img src="note-purple.png" alt="Note"></div>
+          <div class="note" id="note4" style="top: 190px; left: 50px;"><img src="note-purple.png" alt="Note"></div>
+          <div class="note" id="note15" style="top: 50px; left: 40px;"><img src="note-purple.png" alt="Note"></div>
+          <div class="note" id="note16" style="top: 70px; left: 10px;"><img src="note-purple.png" alt="Note"></div>
+          <div class="note" id="note17" style="top: 160px; left: 10px;"><img src="note-purple.png" alt="Note"></div>
+          <div class="note" id="note2" style="top: 230px; left: 155px;"><img src="note-red.png" alt="Note"></div>
+          <div class="note" id="note5" style="top: 240px; left: 110px;"><img src="note-red.png" alt="Note"></div>
+          <div class="note" id="note6" style="top: 190px; left: 120px;"><img src="note-red.png" alt="Note"></div>
+          <div class="note" id="note9" style="top: 220px; left: 140px;"><img src="note-red.png" alt="Note"></div>
+          <div class="note" id="note10" style="top: 150px; left: 155px;"><img src="note-red.png" alt="Note"></div>
+          <div class="note" id="note11" style="top: 190px; left: 120px;"><img src="note-red.png" alt="Note"></div>
+           
+        </div>
+
+        <div class="legend">
+          <div><span class="note-color red"></span> What I love about you</div>
+          <div><span class="note-color yellow"></span> favorite moments with you</div>
+          <div><span class="note-color purple"></span> Don't stop</div>
+        </div>
+      </div>
+
+      <div class="popup-message" id="popup">
+        <p id="popup-text">This is your note.</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+      <div class="vid">A VIDEO</div>
+      <p class="vid-text">moments of us that made my love for you grow</p>
+      <video class="portrait-video" controls>
+        <source src="mm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Baby Mo Section -->
+    <section id="baby">
+      <div class="baby">BY BABY MO</div>
+      <img src="from me.png" alt="From Me">
+    </section>
+
+    <!-- Home Image Stack -->
+   <section id="home-gallery">
+     <div class="home">HOME</div>
+  <div class="box">
+        <span style="--i:1"><img src="111.PNG"></span>
+        <span style="--i:2"><img src="22.JPG"></span>
+        <span style="--i:3"><img src="33.JPG"></span>
+        <span style="--i:4"><img src="44.JPG"></span>
+        <span style="--i:5"><img src="55.JPG"></span>
+        <span style="--i:6"><img src="66.JPG"></span>
+        <span style="--i:7"><img src="77.JPG"></span>
+        <span style="--i:8"><img src="88.JPG"></span>
+        <span style="--i:9"><img src="99.JPG"></span>
+        <span style="--i:10"><img src="0.jpg"></span>
+ </div>
+</section>
+
+<footer id="your-baby">
+  <div class="me">
+    <img src="me.JPG" alt="Me">
+    <p class="name">Your baby</p>
+  </div>
+</footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[slideIndex].classList.add("active");
+      slideIndex = (slideIndex + 1) % slides.length;
+      setTimeout(showSlides, 2000);
+    }
+  </script>
+
+  <!-- Music Player -->
+  <script>
+    const playlist = [
+      { title: "Iris", src: "song1.mp3", cover: "cover1.jpg" },
+      { title: "Sa Bawat Sandali", src: "song2.mp3", cover: "cover2.jpg" },
+      { title: "When I Met You", src: "song3.mp3", cover: "cover3.jpg" }
+    ];
+
+    let currentIndex = 0;
+    const audio = document.getElementById("audio");
+    const playPauseBtn = document.getElementById("play-pause");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const progress = document.getElementById("progress");
+    const title = document.querySelector(".title");
+    const cover = document.querySelector(".cover");
+
+    const playIcon = `<svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>`;
+    const pauseIcon = `<svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+
+    function loadTrack(index) {
+      const track = playlist[index];
+      audio.pause();
+      audio.src = track.src;
+      audio.load();
+      title.textContent = track.title;
+      cover.src = track.cover;
+      playPauseBtn.innerHTML = pauseIcon;
+      audio.play().catch(err => console.log("Autoplay blocked:", err));
+    }
+
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.innerHTML = pauseIcon;
+      } else {
+        audio.pause();
+        playPauseBtn.innerHTML = playIcon;
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+      loadTrack(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % playlist.length;
+      loadTrack(currentIndex);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progress.value = percent || 0;
+    });
+
+    progress.addEventListener("input", () => {
+      const seekTime = (progress.value / 100) * audio.duration;
+      audio.currentTime = seekTime;
+    });
+
+    window.onload = () => {
+      showSlides();
+      loadTrack(currentIndex);
+    };
+  </script>
+
+  <!-- Notes Interactions -->
+  <script>
+    const notes = document.querySelectorAll(".note");
+    const popup = document.getElementById("popup");
+    const popupText = document.getElementById("popup-text");
+    let activeNote = null;
+
+    const messages = {
+      note1: "Our first jog, love",
+      note2: "I love how you show up for others, love",
+      note3: "Don't stop being you, love ",
+      note4: "Don't stop achieving your dreams, i know you can do it love",
+      note5: "I love how hardworking you are, love",
+      note6: "I love your eyes so much, love",
+      note7: "Us watching fireworks, love",
+      note8: "Our first kiss, love",
+       note9: "Gosh i love your smile so much, love",
+        note10: "I love how staightforward you are, love",
+         note11: "Your morning face, love",
+         note12: "Us watching the stars and the moon, love",
+         note13: "Our first sleepover, love",
+         note14: "Us cuddling in your room, love",
+         note15: "Don't stop being kind to yourself, love",
+         note16: "Don't stop doing the things that you love, love",
+         note17: "Don't stop loving me please, love hehe",
+    };
+
+    notes.forEach(note => {
+      note.addEventListener("click", () => {
+        if (activeNote) return;
+
+        activeNote = note;
+        popupText.textContent = messages[note.id] || "A special message for you.";
+        note.classList.remove("fly-in");
+        note.classList.add("fly-out");
+
+        setTimeout(() => {
+          note.style.visibility = "hidden";
+          popup.style.display = "block";
+        }, 800);
+      });
+    });
+
+    function closePopup() {
+      if (!activeNote) return;
+
+      popup.style.display = "none";
+      activeNote.style.visibility = "visible";
+      activeNote.classList.remove("fly-out");
+      activeNote.classList.add("fly-in");
+
+      setTimeout(() => {
+        activeNote = null;
+      }, 800);
+    }
+  </script>
+
+  <!-- Expand on Click for Home Images -->
+<script>
+document.querySelector('.home-stack').addEventListener('click', function () {
+  this.classList.toggle('expanded');
+});
+</script>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const slideshow = document.getElementById('slideshow');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        music.play().catch((e) => {
+          console.log('Music play failed:', e);
+        });
+      } else {
+        music.pause();
+      }
+    });
+  }, {
+    threshold: 0.5 // At least 50% of slideshow must be visible
+  });
+
+  observer.observe(slideshow);
+</script>
+
+</body>
+</html>
